@@ -3,9 +3,8 @@ pipeline {
   stages {
     stage('buildJar') {
       steps {
-        sh 'mvn install -Dmaven.test.skip=true'
-        echo 'Build Successful'
         git(url: 'https://github.com/SparshJain/test', branch: 'master')
+        echo 'Fetch Successful'
       }
     }
   }
